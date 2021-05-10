@@ -59,6 +59,10 @@ mvn clean install -P local
 java -jar target/mutant-svc-1.0.0.jar
 ```
 > La aplicación quedará expuesta en la URL [http://localhost:8080](http://localhost:8080).
+* También es posible desplegar la aplicación dentro de un contenedor docker mediante el siguiente comando:
+``` console
+./mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=edwinmunozrios/mutant-svc
+```
 
 ### Entorno AWS:
 La aplicaci[on también ha sido desplegada en AWS utilizando las herramientas que provee la capa gratuita de la siguiente manera:
