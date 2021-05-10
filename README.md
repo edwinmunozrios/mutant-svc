@@ -54,7 +54,7 @@ docker-compose -f ./src/main/resources/environment/mongo-docker-compose.yml up
 ``` console 
 mvn clean install -P local
 ```
-* Maven generará un jar con la aplicación lista para ser ejecutada dentro de la carpeta **target** llamado ** mutant-svc-1.0.0.jar** el cual puede ejecutar utilizando el siguiente comando:
+* Maven generará un jar con la aplicación lista para ser ejecutada dentro de la carpeta **target** llamado **mutant-svc-1.0.0.jar** el cual puede ejecutar utilizando el siguiente comando:
 ``` console
 java -jar target/mutant-svc-1.0.0.jar
 ```
@@ -72,8 +72,8 @@ La aplicación también ha sido desplegada en AWS utilizando las herramientas qu
 
 ## Pruebas de carga y recursos adicionales  
 Con el fin de probar el rendimiento de la aplicación, en la carpeta '/src/main/resources/load-test' se proveen los siguientes recursos:  
-* Una colección de de peticiones de PostMan que puede ser importada para probar los endpoints de la aplicación tanto en ambiente local como en AWS (Postman es requerido)
-* Un Test Plan de Apache JMeter con que ejecuta pruebas sobre el endpoint de **'/stats'** en AWS y que se puede ejecutar de la siguiente manera (Apache JMeter es requerido):
+* Una colección de peticiones de PostMan que puede ser importada para probar los endpoints de la aplicación tanto en ambiente local como en AWS (Postman es requerido)
+* Un Test Plan de Apache JMeter con que ejecutan pruebas sobre el endpoint de **'/stats'** en AWS y que se puede ejecutar de la siguiente manera (Apache JMeter es requerido):
 ``` console 
 ./jmeter -n -t mutant-svc-load-results.jmx -l results.csv
 ```
