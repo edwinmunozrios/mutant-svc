@@ -6,7 +6,7 @@ mutant-svc es una aplicación basada en Spring Boot que responde a los requerimi
 mutant-svc expone un endpoint '/mutant' que recibe peticiones POST con un arreglo de Strings que representan una matriz a ser analizada. El cuerpo de la petición luce así: 
 ```yaml
 {
-	"dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTC","TCACTG"]
+"dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTC","TCACTG"]
 }
 ```
  
@@ -29,9 +29,9 @@ La aplicación almacena cada petición válida única en una base de datos Mongo
 Igualmente, mutant-svc expone un endpoint ‘/stats’ que devuelva un JSON con las estadísticas de las verificaciones de ADN de la siguiente manera:
 ```yaml
 {
-	"count_mutant_dna":40, 
-	"count_human_dna":100: 
-	"ratio":0.4
+"count_mutant_dna":40, 
+"count_human_dna":100: 
+"ratio":0.4
 }
 ```
 
