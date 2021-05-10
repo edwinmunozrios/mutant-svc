@@ -20,7 +20,7 @@ Que representa la siguiente matriz de nucleobases:
 | **C** | **C** | **C** | **C** | **T** | **C** |
 | **T** | **C** | **A** | **C** | **T** | **G** |
 
-Para cada matriz, la aplicación analiza si corresponde a un ADN mutante o no, devolviendo una respuesta **200 OK** si la matriz analizada cumple las condiciones definidas para ser mutante o ** 403 Forbidden** en caso contrario. Una matriz corresponde a un ADN mutante si se encuentra más de una secuencia de cuatro letras iguales​, de forma oblicua, horizontal o vertical.  
+Para cada matriz, la aplicación analiza si corresponde a un ADN mutante o no, devolviendo una respuesta **200 OK** si la matriz analizada cumple las condiciones definidas para ser mutante o ** 403 Forbidden** en caso contrario. Una matriz corresponde a un ADN mutante si se encuentra más de una secuencia de cuatro letras iguales, de forma oblicua, horizontal o vertical.  
 Adicionalmente, para cada petición se validan dos restricciones de forma. Que la matriz es cuadrada (dimensión NxN) y que N no sea mayor a 1000.  
 
 La aplicación almacena cada petición válida única en una base de datos MongoDB con la información de la matriz y la propiedad que indica si es mutante o no. La persistencia en base de datos se realiza de modo asíncrono, de manera que el tiempo de respuesta de esta operación no afecte la respuesta del endpoint.  
@@ -65,7 +65,7 @@ java -jar target/mutant-svc-1.0.0.jar
 ```
 
 ### Entorno AWS:
-La aplicaci[on también ha sido desplegada en AWS utilizando las herramientas que provee la capa gratuita de la siguiente manera:
+La aplicación también ha sido desplegada en AWS utilizando las herramientas que provee la capa gratuita de la siguiente manera:
 * MongoDB y Mongo Express han sido desplegados en una instancia EC2 independiente.  
 * la aplicación mutant-svc ha sido desplegada en Elastic Beanstalk y sirve en el puerto 80.  
 > [http://mutant-svc.us-east-2.elasticbeanstalk.com](http://mutant-svc.us-east-2.elasticbeanstalk.com)
