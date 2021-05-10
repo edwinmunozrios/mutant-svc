@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "7bd9f708-466e-4cd6-bbb0-a1139bd640ae",
+		"name": "Mutant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mutantRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"dna\":[\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTC\",\"TCACTG\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/mutant",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mutantRequest AWS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"dna\":[\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTG\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://mutant-svc.us-east-2.elasticbeanstalk.com/mutant",
+					"protocol": "http",
+					"host": [
+						"mutant-svc",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notMutantRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"dna\":[\"ATGCCA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"GCCCTA\",\"TCACTG\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/mutant",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notMutantRequest AWS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"dna\":[\"ATGCCA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"GCCCTA\",\"TCACTG\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://mutant-svc.us-east-2.elasticbeanstalk.com/mutant",
+					"protocol": "http",
+					"host": [
+						"mutant-svc",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/stats",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStats AWS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://mutant-svc.us-east-2.elasticbeanstalk.com/stats",
+					"protocol": "http",
+					"host": [
+						"mutant-svc",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"stats"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

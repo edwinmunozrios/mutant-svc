@@ -1,0 +1,29 @@
+# Use mutantdbuser/mutantdbpass as user/password credentials
+version: '3.1'
+
+services:
+
+  mongodb:
+    container_name: mongo-local
+    image: mongo:latest
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mutantdbuser
+      - MONGO_INITDB_DATABASE=admin
+      - MONGO_INITDB_ROOT_PASSWORD=mutantdbpass
+    ports:
+      - '27017:27017'
+  mongo-express:
+    container_name: mongo-express-local
+    image: mongo-express:latest
+    restart: always
+    depends_on:
+      - mongodb
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=mutantdbuser
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=mutantdbpass
+      - ME_CONFIG_MONGODB_SERVER=mongo-local
+      - ME_CONFIG_BASICAUTH_USERNAME=mutantdbuser
+      - ME_CONFIG_BASICAUTH_PASSWORD=mutantdbpass
+    ports:
+      - '8081:8081'

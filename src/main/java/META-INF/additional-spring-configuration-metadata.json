@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "mutant.constants.sequence.limit",
+    "type": "int",
+    "description": "The number of sequences to define a DNA is mutant or not"
+  },
+  {
+    "name": "mutant.constants.nucleobase.expression",
+    "type": "java.lang.String",
+    "description": "A regular expression for the mutant nucleobase strings"
+  },
+  {
+    "name": "mutant.constants.minimum.dnastring.length",
+    "type": "int",
+    "description": "The minimum length required for a DNA String to be analyzed"
+  },
+  {
+    "name": "mutant.constants.matrix.max.length",
+    "type": "int",
+    "description": "The maximum length size for the matrix to be analyzed"
+  }
+]}
